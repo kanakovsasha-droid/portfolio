@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelly — разработчик сайтов, ботов и парсеров</title>
+<meta name="description" content="Александр (Kelly) — фриланс-разработчик: лендинги и PWA, Telegram-боты, парсеры и автоматизация. Портфолио и контакты.">
+<meta property="og:title" content="Kelly — разработчик сайтов, ботов и парсеров">
+<meta property="og:description" content="Лендинги и PWA, Telegram-боты, парсеры и скрипты автоматизации. Делаю под ключ.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0b0f; --bg2:#11131a; --card:#14161f; --line:#23262f;
+  --txt:#e7e9ee; --muted:#8b8f9c; --dim:#5c606c;
+  --acc:#6c5cff; --acc2:#00e0b8; --glow:rgba(108,92,255,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--txt);
+  font-family:'Manrope',system-ui,sans-serif; line-height:1.6;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:0 24px}
+a{color:inherit; text-decoration:none}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif; line-height:1.1; letter-spacing:-.02em}
+
+/* glow blobs */
+.blob{position:fixed; border-radius:50%; filter:blur(90px); opacity:.5; z-index:0; pointer-events:none}
+.blob.a{width:480px;height:480px;background:#6c5cff;top:-180px;right:-120px}
+.blob.b{width:420px;height:420px;background:#00e0b8;top:40%;left:-200px;opacity:.32}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(10,11,15,.7);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:20px;letter-spacing:-.03em}
+.logo b{color:var(--acc2)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{color:var(--muted);font-size:14px;font-weight:500;transition:.2s}
+.nav-links a:hover{color:var(--txt)}
+.nav-cta{background:var(--acc);color:#fff;padding:9px 18px;border-radius:10px;font-size:14px;font-weight:600;transition:.2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px var(--glow)}
+@media(max-width:680px){.nav-links{display:none}}
+
+section{position:relative;z-index:1;padding:90px 0}
+
+/* hero */
+.hero{padding:120px 0 80px;text-align:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);padding:7px 16px;border-radius:100px;font-size:13px;color:var(--muted);margin-bottom:28px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--acc2);box-shadow:0 0 10px var(--acc2);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(40px,7vw,76px);font-weight:700;margin-bottom:24px}
+.hero h1 .grad{background:linear-gradient(120deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:620px;margin:0 auto 40px}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{padding:15px 30px;border-radius:12px;font-weight:600;font-size:16px;transition:.25s;display:inline-flex;align-items:center;gap:10px}
+.btn-primary{background:linear-gradient(120deg,var(--acc),#8a7bff);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px var(--glow)}
+.btn-ghost{background:var(--card);border:1px solid var(--line);color:var(--txt)}
+.btn-ghost:hover{border-color:var(--acc);transform:translateY(-2px)}
+
+/* stats */
+.stats{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-top:64px}
+.stat{text-align:center}
+.stat .num{font-family:'Space Grotesk';font-size:38px;font-weight:700;color:var(--txt)}
+.stat .lbl{font-size:13px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
+
+/* section heads */
+.sec-head{margin-bottom:48px}
+.sec-head .eyebrow{color:var(--acc2);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-bottom:12px}
+.sec-head h2{font-size:clamp(30px,5vw,46px);font-weight:700}
+.sec-head p{color:var(--muted);margin-top:14px;max-width:560px}
+
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}
+.about p{color:var(--muted);margin-bottom:18px;font-size:17px}
+.about p b{color:var(--txt);font-weight:600}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.facts .row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.facts .row:last-child{border:0}
+.facts .row span{color:var(--dim)}
+.facts .row b{font-weight:600}
+@media(max-width:780px){.about{grid-template-columns:1fr}}
+
+/* skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;transition:.25s}
+.skill:hover{border-color:var(--acc);transform:translateY(-4px)}
+.skill .ico{font-size:28px;margin-bottom:16px}
+.skill h3{font-size:20px;margin-bottom:10px}
+.skill p{color:var(--muted);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tag{font-size:12px;background:var(--bg2);border:1px solid var(--line);color:var(--muted);padding:5px 11px;border-radius:8px}
+
+/* projects */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.proj{position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;transition:.3s;overflow:hidden;display:flex;flex-direction:column}
+.proj::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,var(--glow),transparent 60%);opacity:0;transition:.3s}
+.proj:hover{transform:translateY(-5px);border-color:var(--acc)}
+.proj:hover::before{opacity:1}
+.proj .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;position:relative}
+.proj .pico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:22px;background:var(--bg2);border:1px solid var(--line)}
+.proj .live{font-size:12px;color:var(--acc2);display:flex;align-items:center;gap:6px}
+.proj h3{font-size:22px;margin-bottom:8px;position:relative}
+.proj .url{color:var(--acc);font-size:14px;font-weight:600;margin-bottom:12px;position:relative}
+.proj p{color:var(--muted);font-size:15px;position:relative;flex:1}
+.proj .visit{margin-top:18px;font-weight:600;font-size:14px;color:var(--txt);display:inline-flex;align-items:center;gap:8px;position:relative}
+.proj:hover .visit{color:var(--acc2)}
+
+/* contact */
+.contact{text-align:center}
+.contact-card{background:linear-gradient(135deg,var(--bg2),var(--card));border:1px solid var(--line);border-radius:24px;padding:56px 32px;position:relative;overflow:hidden}
+.contact-card::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:500px;height:500px;background:radial-gradient(circle,var(--glow),transparent 70%);opacity:.6}
+.contact-card h2{font-size:clamp(28px,5vw,42px);margin-bottom:16px;position:relative}
+.contact-card p{color:var(--muted);margin-bottom:32px;position:relative;font-size:17px}
+.tg-btn{position:relative;display:inline-flex;align-items:center;gap:12px;background:#229ed9;color:#fff;padding:17px 36px;border-radius:14px;font-weight:700;font-size:18px;transition:.25s}
+.tg-btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 14px 40px rgba(34,158,217,.4)}
+.tg-btn svg{width:24px;height:24px}
+
+footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--dim);font-size:14px;position:relative;z-index:1}
+footer b{color:var(--acc2)}
+</style>
+</head>
+<body>
+<div class="blob a"></div>
+<div class="blob b"></div>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">ke11y<b>.</b></div>
+    <div class="nav-links">
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Что умею</a>
+      <a href="#projects">Работы</a>
+    </div>
+    <a class="nav-cta" href="https://t.me/ke11y7" target="_blank" rel="noopener">Написать</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="badge"><span class="dot"></span>Открыт для заказов</div>
+    <h1>Делаю <span class="grad">сайты, ботов<br>и парсеры</span> под ключ</h1>
+    <p>Привет, я Александр — фриланс-разработчик. Запускаю лендинги и PWA, пишу Telegram-ботов, собираю парсеры и скрипты автоматизации. От идеи до боевого деплоя.</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="https://t.me/ke11y7" target="_blank" rel="noopener">Связаться в Telegram →</a>
+      <a class="btn btn-ghost" href="#projects">Посмотреть работы</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">3+</div><div class="lbl">сайта в проде</div></div>
+      <div class="stat"><div class="num">10+</div><div class="lbl">ботов и скриптов</div></div>
+      <div class="stat"><div class="num">24/7</div><div class="lbl">на связи</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Обо мне</div>
+      <h2>Кто я и как работаю</h2>
+    </div>
+    <div class="about">
+      <div>
+        <p><b>Александр (Kelly)</b>, 20 лет. Разрабатываю на фрилансе: от простого лендинга до Telegram-ботов с базой и парсеров, которые сами тянут данные и шлют отчёты.</p>
+        <p>Беру проект целиком — <b>дизайн, вёрстка, бэкенд, деплой</b>. Не пропадаю после сдачи: правки, хостинг, домены, аналитика — помогу довести до результата.</p>
+        <p>Люблю быстрые и аккуратные решения: чистый код, понятный заказчику, и сайт, который реально приносит заявки, а не просто красиво выглядит.</p>
+      </div>
+      <div class="facts">
+        <div class="row"><span>Возраст</span><b>20 лет</b></div>
+        <div class="row"><span>Формат</span><b>Фриланс / удалённо</b></div>
+        <div class="row"><span>Стек</span><b>HTML/CSS/JS, Python</b></div>
+        <div class="row"><span>Деплой</span><b>GitHub Pages, Beget, VPS</b></div>
+        <div class="row"><span>Связь</span><b>@ke11y7</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Услуги</div>
+      <h2>Что я умею</h2>
+      <p>Полный цикл: спроектирую, напишу, задеплою и поддержу.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill">
+        <div class="ico">🌐</div>
+        <h3>Сайты и лендинги</h3>
+        <p>Продающие одностраничники и многостраничные сайты. Адаптив под телефон, форма заявок на почту, SEO-разметка.</p>
+        <div class="tags"><span class="tag">Landing</span><span class="tag">Адаптив</span><span class="tag">SEO</span></div>
+      </div>
+      <div class="skill">
+        <div class="ico">📱</div>
+        <h3>PWA-приложения</h3>
+        <p>Веб-приложения, которые ставятся на телефон как обычное приложение. Иконка на экране, работа офлайн.</p>
+        <div class="tags"><span class="tag">PWA</span><span class="tag">iOS / Android</span><span class="tag">Offline</span></div>
+      </div>
+      <div class="skill">
+        <div class="ico">🤖</div>
+        <h3>Telegram-боты</h3>
+        <p>Боты под задачу: приём заявок, продажа доступа, рассылки, HR-анкеты, оплаты. С базой и админкой.</p>
+        <div class="tags"><span class="tag">aiogram 3</span><span class="tag">SQLite</span><span class="tag">Оплаты</span></div>
+      </div>
+      <div class="skill">
+        <div class="ico">🔎</div>
+        <h3>Парсеры и сбор данных</h3>
+        <p>Скрипты, которые сами собирают данные с сайтов и API, чистят их и отдают в таблицу, на сайт или в бота.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">API</span><span class="tag">Scraping</span></div>
+      </div>
+      <div class="skill">
+        <div class="ico">⚙️</div>
+        <h3>Скрипты и автоматизация</h3>
+        <p>Автопостинг, отложка, обработка файлов, интеграции — рутину забираю на себя, чтобы работало без вас.</p>
+        <div class="tags"><span class="tag">Automation</span><span class="tag">Cron</span><span class="tag">Боты</span></div>
+      </div>
+      <div class="skill">
+        <div class="ico">🚀</div>
+        <h3>Деплой и поддержка</h3>
+        <p>Куплю и настрою домен, подниму на хостинге, подключу аналитику. Дальше — правки и сопровождение.</p>
+        <div class="tags"><span class="tag">Домены</span><span class="tag">Хостинг</span><span class="tag">Support</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Портфолио</div>
+      <h2>Сайты в проде</h2>
+      <p>Живые проекты, которые работают и принимают заявки прямо сейчас.</p>
+    </div>
+    <div class="proj-grid">
+
+      <a class="proj" href="https://pogruzchik51.ru" target="_blank" rel="noopener">
+        <div class="top">
+          <div class="pico">🚜</div>
+          <div class="live"><span class="dot"></span>Online</div>
+        </div>
+        <h3>Аренда погрузчика</h3>
+        <div class="url">pogruzchik51.ru</div>
+        <p>Лендинг аренды фронтального погрузчика в Мурманске. Калькулятор стоимости, приём заявок на почту, тёмный «промышленный» дизайн.</p>
+        <span class="visit">Открыть сайт →</span>
+      </a>
+
+      <a class="proj" href="https://arendasev.ru" target="_blank" rel="noopener">
+        <div class="top">
+          <div class="pico">🏠</div>
+          <div class="live"><span class="dot"></span>Online</div>
+        </div>
+        <h3>Посуточная аренда квартир</h3>
+        <div class="url">arendasev.ru</div>
+        <p>Сайт посуточной аренды в Севастополе с галереей, ценами и админкой: владелец сам правит фото, цены и занятость без программиста.</p>
+        <span class="visit">Открыть сайт →</span>
+      </a>
+
+      <a class="proj" href="https://plan1ro.ru" target="_blank" rel="noopener">
+        <div class="top">
+          <div class="pico">📐</div>
+          <div class="live"><span class="dot"></span>Online</div>
+        </div>
+        <h3>Plan1ro</h3>
+        <div class="url">plan1ro.ru</div>
+        <p>Веб-проект под задачу заказчика: вёрстка, логика и деплой под ключ. Адаптив и аккуратный интерфейс.</p>
+        <span class="visit">Открыть сайт →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <h2>Нужен сайт, бот или парсер?</h2>
+      <p>Опишите задачу в Telegram — отвечу, оценю и предложу решение.</p>
+      <a class="tg-btn" href="https://t.me/ke11y7" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+        Написать @ke11y7
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 <b>ke11y</b> · Сайты · Боты · Парсеры · <a href="https://t.me/ke11y7" target="_blank" rel="noopener">@ke11y7</a></div>
+</footer>
+
+</body>
+</html>
