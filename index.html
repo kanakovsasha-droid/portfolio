@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kelly — разработчик сайтов, ботов и парсеров</title>
-<meta name="description" content="Александр (Kelly) — фриланс-разработчик: лендинги и PWA, Telegram-боты, парсеры и автоматизация. Портфолио и контакты.">
-<meta property="og:title" content="Kelly — разработчик сайтов, ботов и парсеров">
-<meta property="og:description" content="Лендинги и PWA, Telegram-боты, парсеры и скрипты автоматизации. Делаю под ключ.">
+<title>Kelly — фулл-стек: сайты, приложения, боты и парсеры</title>
+<meta name="description" content="Александр (Kelly) — фулл-стек разработчик: сайты и PWA, мобильные приложения iOS/Android, Telegram-боты, парсеры и автоматизация. Всё под ключ.">
+<meta property="og:title" content="Kelly — фулл-стек: сайты, приложения, боты и парсеры">
+<meta property="og:description" content="Сайты и PWA, мобильные приложения iOS/Android, Telegram-боты, парсеры. Вы описываете идею — я делаю всё под ключ.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,6 +95,31 @@ section{position:relative;z-index:1;padding:90px 0}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .tag{font-size:12px;background:var(--bg2);border:1px solid var(--line);color:var(--muted);padding:5px 11px;border-radius:8px}
 
+/* turnkey */
+.turnkey{background:var(--bg2)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;counter-reset:s}
+.tstep{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;position:relative}
+.tstep .sn{font-family:'Space Grotesk';font-size:14px;font-weight:700;color:var(--acc2);margin-bottom:14px}
+.tstep h3{font-size:18px;margin-bottom:8px}
+.tstep p{color:var(--muted);font-size:14px}
+.turnkey .punch{text-align:center;margin-top:36px;font-size:clamp(18px,2.6vw,24px);font-family:'Space Grotesk';font-weight:600;color:var(--txt)}
+.turnkey .punch b{background:linear-gradient(120deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* featured */
+.featured{background:linear-gradient(135deg,#171a26,#14161f);border:1px solid var(--line);border-radius:24px;padding:40px;margin-bottom:24px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr;gap:18px}
+.featured::before{content:'';position:absolute;top:-40%;right:-10%;width:420px;height:420px;background:radial-gradient(circle,var(--glow),transparent 70%);opacity:.6;pointer-events:none}
+.featured .ftop{display:flex;align-items:center;gap:14px;position:relative;flex-wrap:wrap}
+.featured .pico{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-size:26px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff}
+.featured .mine{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;background:rgba(108,92,255,.15);color:#b3a9ff;border:1px solid rgba(108,92,255,.35);padding:5px 12px;border-radius:8px}
+.featured h3{font-size:28px;position:relative}
+.featured .url{color:var(--acc);font-weight:600;position:relative}
+.featured p{color:var(--muted);font-size:16px;position:relative;max-width:760px}
+.featured .feats{display:flex;flex-wrap:wrap;gap:9px;position:relative}
+.featured .feats span{font-size:13px;background:var(--bg2);border:1px solid var(--line);color:var(--txt);padding:7px 13px;border-radius:9px}
+.featured .visit{position:relative;font-weight:600;color:var(--acc2);display:inline-flex;align-items:center;gap:8px}
+.platforms{display:flex;gap:8px;position:relative;flex-wrap:wrap}
+.platforms span{font-size:12px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:5px 11px}
+
 /* projects */
 .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
 .proj{position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;transition:.3s;overflow:hidden;display:flex;flex-direction:column}
@@ -143,15 +168,16 @@ footer b{color:var(--acc2)}
 <header class="hero">
   <div class="wrap">
     <div class="badge"><span class="dot"></span>Открыт для заказов</div>
-    <h1>Делаю <span class="grad">сайты, ботов<br>и парсеры</span> под ключ</h1>
-    <p>Привет, я Александр — фриланс-разработчик. Запускаю лендинги и PWA, пишу Telegram-ботов, собираю парсеры и скрипты автоматизации. От идеи до боевого деплоя.</p>
+    <h1>Делаю <span class="grad">сайты, приложения,<br>ботов и парсеры</span> под ключ</h1>
+    <p>Привет, я Александр — фулл-стек разработчик. Сайты и PWA, мобильные приложения для iOS и Android, Telegram-боты, парсеры и автоматизация. Вы только описываете идею — всё остальное делаю я.</p>
     <div class="hero-btns">
       <a class="btn btn-primary" href="https://t.me/ke11y7" target="_blank" rel="noopener">Связаться в Telegram →</a>
       <a class="btn btn-ghost" href="#projects">Посмотреть работы</a>
     </div>
     <div class="stats">
-      <div class="stat"><div class="num">3+</div><div class="lbl">сайта в проде</div></div>
-      <div class="stat"><div class="num">10+</div><div class="lbl">ботов и скриптов</div></div>
+      <div class="stat"><div class="num">10+</div><div class="lbl">сайтов в проде</div></div>
+      <div class="stat"><div class="num">15+</div><div class="lbl">ботов и скриптов</div></div>
+      <div class="stat"><div class="num">iOS+Android</div><div class="lbl">мобильные апп</div></div>
       <div class="stat"><div class="num">24/7</div><div class="lbl">на связи</div></div>
     </div>
   </div>
@@ -165,15 +191,16 @@ footer b{color:var(--acc2)}
     </div>
     <div class="about">
       <div>
-        <p><b>Александр (Kelly)</b>, 20 лет. Разрабатываю на фрилансе: от простого лендинга до Telegram-ботов с базой и парсеров, которые сами тянут данные и шлют отчёты.</p>
-        <p>Беру проект целиком — <b>дизайн, вёрстка, бэкенд, деплой</b>. Не пропадаю после сдачи: правки, хостинг, домены, аналитика — помогу довести до результата.</p>
-        <p>Люблю быстрые и аккуратные решения: чистый код, понятный заказчику, и сайт, который реально приносит заявки, а не просто красиво выглядит.</p>
+        <p><b>Александр (Kelly)</b>, 20 лет, <b>фулл-стек разработчик</b>. От лендинга до собственного мобильного приложения для iOS и Android, от Telegram-бота с базой до парсеров, которые сами тянут данные и шлют отчёты.</p>
+        <p>Мой флагман — <b>plan1ro</b>: приложение «вся жизнь в одном экране» с ИИ-ассистентом и голосовым вводом. Спроектировал, написал фронт, бэк, мобилку и сайт — полностью сам.</p>
+        <p>Беру проект <b>целиком и под ключ</b>: дизайн, фронт, бэкенд, мобильные приложения, деплой, домен, аналитика. От заказчика — только идея, всё остальное я делаю и отдаю готовое.</p>
       </div>
       <div class="facts">
         <div class="row"><span>Возраст</span><b>20 лет</b></div>
-        <div class="row"><span>Формат</span><b>Фриланс / удалённо</b></div>
-        <div class="row"><span>Стек</span><b>HTML/CSS/JS, Python</b></div>
-        <div class="row"><span>Деплой</span><b>GitHub Pages, Beget, VPS</b></div>
+        <div class="row"><span>Роль</span><b>Фулл-стек</b></div>
+        <div class="row"><span>Web</span><b>HTML/CSS/JS, Python</b></div>
+        <div class="row"><span>Mobile</span><b>Swift (iOS), Kotlin (Android)</b></div>
+        <div class="row"><span>Деплой</span><b>GitHub, Beget, VPS</b></div>
         <div class="row"><span>Связь</span><b>@ke11y7</b></div>
       </div>
     </div>
@@ -188,6 +215,12 @@ footer b{color:var(--acc2)}
       <p>Полный цикл: спроектирую, напишу, задеплою и поддержу.</p>
     </div>
     <div class="skills-grid">
+      <div class="skill">
+        <div class="ico">📲</div>
+        <h3>Мобильные приложения</h3>
+        <p>Нативные приложения под iOS и Android: от идеи и дизайна до публикации. Свой продукт plan1ro — лучшее подтверждение.</p>
+        <div class="tags"><span class="tag">Swift</span><span class="tag">Kotlin</span><span class="tag">iOS / Android</span></div>
+      </div>
       <div class="skill">
         <div class="ico">🌐</div>
         <h3>Сайты и лендинги</h3>
@@ -228,13 +261,52 @@ footer b{color:var(--acc2)}
   </div>
 </section>
 
+<section class="turnkey">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Всё под ключ</h2>
+      <p>Вы не вникаете в код, домены и хостинг. Описываете, что хотите — забираете готовый продукт.</p>
+    </div>
+    <div class="steps">
+      <div class="tstep"><div class="sn">ШАГ 01</div><h3>Вы рассказываете идею</h3><p>В двух словах: что нужно и для чего. Остальное уточню сам.</p></div>
+      <div class="tstep"><div class="sn">ШАГ 02</div><h3>Я делаю дизайн и код</h3><p>Проектирую, рисую, пишу фронт, бэк и мобилку. Показываю результат.</p></div>
+      <div class="tstep"><div class="sn">ШАГ 03</div><h3>Заливаю на деплой</h3><p>Домен, хостинг, публикация в сторах — настраиваю всё сам.</p></div>
+      <div class="tstep"><div class="sn">ШАГ 04</div><h3>Поддерживаю</h3><p>Правки, обновления, аналитика. Продукт остаётся живым.</p></div>
+    </div>
+    <div class="punch">Хотите сайт или приложение? Вы <b>не делаете ничего</b> — я делаю всё.</div>
+  </div>
+</section>
+
 <section id="projects">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Портфолио</div>
-      <h2>Сайты в проде</h2>
-      <p>Живые проекты, которые работают и принимают заявки прямо сейчас.</p>
+      <h2>Мои проекты</h2>
+      <p>Живые продукты, которые работают прямо сейчас.</p>
     </div>
+
+    <a class="featured" href="https://plan1ro.ru" target="_blank" rel="noopener">
+      <div class="ftop">
+        <div class="pico">📐</div>
+        <span class="mine">Мой продукт</span>
+        <div class="platforms"><span>iOS · Swift</span><span>Android · Kotlin</span><span>Web</span></div>
+      </div>
+      <h3>plan1ro — вся жизнь в одном экране</h3>
+      <div class="url">plan1ro.ru</div>
+      <p>Личный продукт, который я построил полностью сам — дизайн, фронт, бэкенд, мобильные приложения и сайт. Дневные и недельные задачи, здоровье: питание, тренировки, трекер цикла. Голосовой ввод и встроенный ИИ-ассистент. Гибкие настройки под себя.</p>
+      <div class="feats">
+        <span>📅 Задачи дня и недели</span>
+        <span>🥗 Питание</span>
+        <span>🏋️ Тренировки</span>
+        <span>🩺 Трекер здоровья и цикла</span>
+        <span>🎙️ Голосовой ввод</span>
+        <span>🤖 ИИ-ассистент</span>
+        <span>⚙️ Гибкие настройки</span>
+      </div>
+      <span class="visit">Открыть plan1ro.ru →</span>
+    </a>
+
     <div class="proj-grid">
 
       <a class="proj" href="https://pogruzchik51.ru" target="_blank" rel="noopener">
@@ -259,17 +331,6 @@ footer b{color:var(--acc2)}
         <span class="visit">Открыть сайт →</span>
       </a>
 
-      <a class="proj" href="https://plan1ro.ru" target="_blank" rel="noopener">
-        <div class="top">
-          <div class="pico">📐</div>
-          <div class="live"><span class="dot"></span>Online</div>
-        </div>
-        <h3>Plan1ro</h3>
-        <div class="url">plan1ro.ru</div>
-        <p>Веб-проект под задачу заказчика: вёрстка, логика и деплой под ключ. Адаптив и аккуратный интерфейс.</p>
-        <span class="visit">Открыть сайт →</span>
-      </a>
-
     </div>
   </div>
 </section>
@@ -288,7 +349,7 @@ footer b{color:var(--acc2)}
 </section>
 
 <footer>
-  <div class="wrap">© 2026 <b>ke11y</b> · Сайты · Боты · Парсеры · <a href="https://t.me/ke11y7" target="_blank" rel="noopener">@ke11y7</a></div>
+  <div class="wrap">© 2026 <b>ke11y</b> · Сайты · Приложения · Боты · Парсеры · <a href="https://t.me/ke11y7" target="_blank" rel="noopener">@ke11y7</a></div>
 </footer>
 
 </body>
